@@ -1,0 +1,34 @@
+<% if edit %>
+  <% title = "Edit Twist" %>
+  <% action = twist_url(twist) %>
+  <% button_text = "Update Twist" %>
+<% else %>
+  <% title = "Create Twist" %>
+  <% action = twists_url %>
+  <% button_text = "Create Twist" %>
+<% end %>
+
+<h1><%= title %></h1>
+
+<% if flash[:errors] %>
+  <ul>
+    <% flash[:errors].each do |err| %>
+      <li>
+        <%= err %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <% if edit %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+
+  <label for="body">Body: </label>
+  <input id="body" type="text" name="twist[body]" value="<%= twist.body %>">
+
+  <input type="submit" name="" value="<%= button_text %>">
+</form>

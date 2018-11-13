@@ -1,0 +1,14 @@
+<h1>1 Single Twist</h1>
+<%= @twist.body %>, by <%= @twist.author.username %>
+
+<% if current_user.twist_ids.include?(@twist.id) %>
+  <a href="<%= edit_twist_url(@twist) %>">Edit this twist</a>
+
+
+<form action="<%= twist_url(@twist) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" name="" value="Delete Twist">
+</form>
+
+<% end %>

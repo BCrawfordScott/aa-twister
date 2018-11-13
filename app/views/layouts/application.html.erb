@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twister</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- <script type="text/javascript">
+      window.logo = "<%= image_url('twister-logo.png')%>"
+    </script> -->
+
+  </head>
+
+  <body>
+    <% if @putting_this_here_so_i_dont_have_to_uncomment %>
+      <h3>Hello <%= current_user.username %>!</h3>
+
+      <form action="<%= session_url %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token">
+
+        <input type="submit" value="Log Out">
+
+      </form>
+    <% end %>
+
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |err| %>
+          <li>
+            <%= err %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= yield %>
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.user-form {
+  position: relative;
+}
+
+.user-form img {
+    width: 265px;
+    position: absolute;
+    top: -124px;
+    left: -200px;
+}

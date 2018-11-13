@@ -1,0 +1,47 @@
+<% action = login_form ? session_url : users_url %>
+
+
+<form class="user-form" action="<%= action %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div class="inputs">
+    <section>
+      <label for="username">Username:</label>
+      <input id="username" type="text" name="user[username]" value="">
+    </section>
+    <section>
+      <label for="password">Password:</label>
+      <input id="password" type="password" name="user[password]" value="">
+    </section>
+  </div>
+
+
+  <input type="submit" value="Log in">
+
+</form>
+
+<% redirect_link = login_form ? new_user_url : new_session_url %>
+<% link_text = login_form ? "Sign Up" : "Log In" %>
+<span class="login-signup">
+  Already a member? <a href="<%= redirect_link %>"><%= link_text %></a>
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <%= image_tag  "170302113334_untitled.png" %> -->

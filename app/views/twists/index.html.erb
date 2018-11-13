@@ -1,0 +1,10 @@
+<h1>All the twists</h1>
+
+<ol>
+  <% @twists.each do |twist| %>
+    <li>
+      <a href="<%= twist_url(twist) %>">
+        <%= twist.body %></a>, by <%= twist.author.username %>
+    </li>
+  <% end %>
+</ol>

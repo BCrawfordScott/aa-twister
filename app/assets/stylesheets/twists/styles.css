@@ -1,0 +1,54 @@
+#root {
+  font-family: sans-serif;
+}
+
+.twist-h3 {
+  font-size: 36px;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.twist-index {
+  height: 100vh;
+  width: 100vw;
+}
+
+.twist-list {
+  list-style: none;
+  width: 50%;
+  margin: 7% auto;
+  color: white;
+  max-width: 420px;
+  padding: 0;
+}
+
+.twist-index-item {
+  background-color: lightseagreen;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.twist-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.twist-input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.twist-submit-button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  width: 25%;
+  align-self: flex-end;
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 5px;
+}

@@ -1,0 +1,67 @@
+
+.user-form {
+  width: 400px;
+  margin: auto;
+  font-family: 'Caveat Brush', cursive;
+  border: 2px solid gold;
+  border-radius: 5px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 2px grey;
+}
+
+h1 {
+  font-family: 'Caveat Brush', cursive;
+  text-align: center;
+  padding: 10px;
+  margin-top: 75px;
+  color: slateblue;
+}
+
+.user-form > input[type=submit] {
+  font-family: 'Caveat Brush', cursive;
+  margin-top: 30px;
+  width: 75px;
+  background-color: cadetblue;
+  font-size: 20px;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.user-form > input[type=submit]:hover {
+  background-color: white;
+  color: cadetblue;
+  cursor: pointer;
+}
+
+.inputs label {
+  font-size: 20px;
+  color: firebrick;
+}
+
+/* .inputs label:hover {
+  cursor: pointer;
+  color: yellow;
+} */
+
+.inputs > section {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: 5px;
+}
+
+.inputs input {
+  width: 150px;
+}
+
+.login-signup {
+  text-align: center;
+  display: block;
+  padding: 30px;
+  font-family: 'Caveat Brush', cursive;
+}
