@@ -16,7 +16,7 @@ const App = ({ store }) => {
         <div>
           <section className="header">
             <div className="logo-info">
-              <img className="logo" src="../images/twister-logo.png" />
+              <img className="logo" src={window.logo} />
               <h3 className="twist-h3">App Academy Twister</h3>
             </div>
             <Greeting />
